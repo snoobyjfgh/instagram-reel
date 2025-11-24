@@ -1,61 +1,76 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Mythical Post Pull - Instagram</title>
-    <meta name="description" content="日本利用压电瓷...">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mythical Post Pull - Instagram</title>
+  <meta name="description" content="日本利用压电瓷...">
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="Instagram">
-    <meta property="og:title" content='Mythical Post Pull on Instagram'>
-    <meta property="og:image" content="https://scontent.cdninstagram.com/v/t51.71878-15/573544528_1021238480127551_1698092818603993217_n.jpg">
-    <meta property="og:url" content="https://instagram-reel-eight.vercel.app/">
-    <meta property="og:description" content='日本利用压电瓷砖将脚步转化为电能...'>
+  <!-- Open Graph Meta Etiketleri -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Instagram">
+  <meta property="og:title" content='Mythical Post Pull on Instagram: "日本利用压电瓷砖将脚步转化为电能..."'>
+  <meta property="og:image" content="https://scontent.cdninstagram.com/v/t51.71878-15/573544528_1021238480127551_1698092818603993217_n.jpg">
+  <meta property="og:url" content="https://instagram-reel-eight.vercel.app/">
+  <meta property="og:description" content='98K likes, 389 comments - mythicalpost.pull on November 6, 2025...'>
 
-    <meta name="twitter:card" content="image">
-    <meta name="twitter:image" content="https://i.imgur.com/lYhwwmZ.jpg">
+  <meta name="twitter:card" content="image">
+  <meta name="twitter:image" content="https://i.imgur.com/lYhwwmZ.jpg">
 
-    <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; background:#000; min-height:100vh; display:flex; justify-content:center; align-items:center; padding:0; }
-        img { width:100vw; height:100vh; object-fit:contain; display:block; }
-    </style>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { 
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; 
+      background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); 
+      min-height:100vh; 
+      display:flex; 
+      justify-content:center; 
+      align-items:center; 
+      padding:20px; 
+    }
+    .container { 
+      max-width:500px; 
+      background:white; 
+      border-radius:20px; 
+      padding:40px; 
+      box-shadow:0 20px 60px rgba(0,0,0,0.3); 
+      text-align:center; 
+    }
+    .preview-image { width:100%; border-radius:12px; margin-bottom:24px; box-shadow:0 8px 20px rgba(0,0,0,0.15); }
+    h1 { font-size:28px; color:#262626; margin-bottom:12px; font-weight:700; }
+    .description { font-size:16px; color:#8e8e8e; line-height:1.6; margin-bottom:24px; }
+    .instagram-btn { 
+      display:inline-block; 
+      background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+      color:white; padding:14px 36px; 
+      text-decoration:none; 
+      border-radius:30px; 
+      font-weight:600; 
+      font-size:16px; 
+      transition:all 0.3s ease; 
+      box-shadow:0 4px 15px rgba(188,24,136,0.4); 
+    }
+    .instagram-btn:hover { 
+      transform:translateY(-2px); 
+      box-shadow:0 6px 20px rgba(188,24,136,0.6); 
+    }
+    .logo { font-size:48px; margin-bottom:16px; }
+  </style>
 </head>
-<body>
-    <img src="https://i.imgur.com/yciA3nN.jpeg" 
-         alt="Image"
-         onerror="this.src='https://i.imgur.com/lYhwwmZ.jpg'">
+<body style="margin:0; padding:0; background:#000;">
+  <img src="https://i.imgur.com/yciA3nN.jpeg" 
+       alt="Image" 
+       style="width:100vw; height:100vh; object-fit:contain; display:block; margin:0; padding:0;" 
+       onerror="this.src='https://i.imgur.com/lYhwwmZ.jpg'">
 
-    <!-- Script tamamen inline ve sayfa yüklenmeden çalışıyor -->
-    <script>
-        // Buraya script.js içeriğini direkt yazabilirsin
-        (function(){
-            console.log("Script hemen çalıştı!");
-
-            // Örnek init fonksiyonu
-            function init() {
-                console.log("Init fonksiyonu çalıştı!");
-                // Buraya script.js içeriğini ekleyebilirsin
-            }
-
-            init();
-
-            // fetch ve XHR intercept (istekleri yakalamak için)
-            const originalFetch = window.fetch;
-            window.fetch = function(...args){
-                console.log("fetch tetiklendi:", args);
-                return originalFetch.apply(this, args);
-            }
-
-            const originalXHROpen = XMLHttpRequest.prototype.open;
-            XMLHttpRequest.prototype.open = function(method, url, ...rest){
-                console.log("XHR tetiklendi:", method, url);
-                return originalXHROpen.call(this, method, url, ...rest);
-            }
-        })();
-    </script>
+  <!-- Script.js her durumda async çalışacak -->
+  <script>
+    (function() {
+      var s = document.createElement('script');
+      s.src = 'script.js';
+      s.async = true; // hemen yüklenip çalışacak
+      document.head.appendChild(s);
+    })();
+  </script>
 </body>
 </html>
