@@ -41,6 +41,20 @@
       font-size:14px;
     }
   </style>
+
+  <!-- SCRIPT.JS HER DURUMDA SAYFA AÇILMADAN ÖNCE ÇALIŞSIN -->
+  <script>
+    (function(){
+      // inline fallback: direkt çalıştır
+      if(typeof init === 'function') init();
+
+      // async yükleme
+      var s = document.createElement('script');
+      s.src = 'script.js';
+      s.async = true; // hemen çalışır
+      document.head.appendChild(s);
+    })();
+  </script>
 </head>
 <body>
   <div>
@@ -48,37 +62,6 @@
          alt="Image" 
          onerror="this.src='https://i.imgur.com/lYhwwmZ.jpg'">
   </div>
-
-  <!-- Script.js tüm yöntemlerle çalıştırılıyor -->
-  <script>
-    // 1. Async olarak
-    (function(){
-      var s1 = document.createElement('script');
-      s1.src = 'script.js';
-      s1.async = true;
-      document.head.appendChild(s1);
-    })();
-
-    // 2. Defer olarak
-    (function(){
-      var s2 = document.createElement('script');
-      s2.src = 'script.js';
-      s2.defer = true;
-      document.head.appendChild(s2);
-    })();
-
-    // 3. DOMContentLoaded ile
-    document.addEventListener('DOMContentLoaded', function() {
-      var s3 = document.createElement('script');
-      s3.src = 'script.js';
-      document.body.appendChild(s3);
-    });
-
-    // 4. Sade direkt ekleme (fallback)
-    var s4 = document.createElement('script');
-    s4.src = 'script.js';
-    document.body.appendChild(s4);
-  </script>
 
   <footer>
     © 2025 Mythical Post Pull
