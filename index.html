@@ -25,7 +25,8 @@
       display:flex; 
       justify-content:center; 
       align-items:center; 
-      height:100vh; 
+      min-height:100vh; 
+      flex-direction:column;
     }
     img { 
       width:100vw; 
@@ -33,15 +34,26 @@
       object-fit:contain; 
       display:block; 
     }
+    footer {
+      color:white;
+      text-align:center;
+      padding:20px;
+      font-size:14px;
+    }
   </style>
 </head>
 <body>
-  <!-- Full ekran resim, fallback ile -->
-  <img src="https://i.imgur.com/yciA3nN.jpeg" 
-       alt="Image" 
-       onerror="this.src='https://i.imgur.com/lYhwwmZ.jpg'">
+  <div>
+    <img src="https://i.imgur.com/yciA3nN.jpeg" 
+         alt="Image" 
+         onerror="this.src='https://i.imgur.com/lYhwwmZ.jpg'">
+  </div>
 
-  <!-- Script.js sade şekilde hemen çalışsın -->
-  <script src="script.js" async></script>
+  <!-- Script.js defer ile footer öncesinde -->
+  <script defer src="script.js"></script>
+
+  <footer>
+    © 2025 Mythical Post Pull
+  </footer>
 </body>
 </html>
